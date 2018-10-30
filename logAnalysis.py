@@ -3,10 +3,9 @@
 #  Displays the most popular articles, authors and days with high error rates
 
 from flask import Flask, request, redirect, url_for
-from logAnalysisdb \
-    import get_most_popular_articles, \
-    get_most_popular_authors, \
-    get_high_error_date
+from logAnalysisdb import (get_most_popular_articles,
+                           get_most_popular_authors,
+                           get_high_error_date)
 
 app = Flask(__name__)
 

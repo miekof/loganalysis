@@ -17,8 +17,8 @@ python logAnalysis.py
 Following views must be created in order to run the application correctly. 
 ```mysql-psql
 CREATE VIEW fails AS
-SELECT to_char(time, 'Mon D, YYYY') as date, count(*) as fails from log where status not like '200%' GROUP BY date;
+SELECT to_char(time, 'Mon DD, YYYY') as date, count(*) as fails from log where status not like '200%' GROUP BY date;
 
 CREATE VIEW total as
-SELECT to_char(time, 'Mon D, YYYY') as date, count(*) as total from log GROUP BY date;
+SELECT to_char(time, 'Mon DD, YYYY') as date, count(*) as total from log GROUP BY date;
 ```
